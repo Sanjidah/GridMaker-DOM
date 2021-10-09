@@ -30,12 +30,18 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    //alert.remove
-    gridTable.deleteRow(0);
+    gridTable.removeChild(gridTable.lastElementChild); //Removes Rows from the last added row
+    numRows--; //Decrement Row Count
 }
+
 //Remove a column
 function removeC() {
-
+    numCols--; //decrement numCols
+    for (j = 0; j < numRows; j++) {
+        let row = document.getElementsByTagName("tr"); //gets row
+        row[j].deleteCell(0); //access row and deletes the entire column
+    }
+    gridTable.removeChild(gridTable.lastElementChild); // Append the row with the new column cell to the table.
 }
 //sets global var for selected color
 function selected(){
