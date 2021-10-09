@@ -30,9 +30,10 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    //alert.remove
-    gridTable.deleteRow(0);
+    gridTable.removeChild(gridTable.lastElementChild); //Removes Rows from the last added row
+    numRows--; //Decrement Row Count
 }
+
 //Remove a column
 function removeC() {
 
