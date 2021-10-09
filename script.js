@@ -18,6 +18,14 @@ function addR() {
 
 //Add a column
 function addC() {
+    numCols++; // Increment number of columns
+    for (i = 0; i < numRows; i++) { 
+        let col = document.getElementsByTagName("tr")[i]; // loop over every row
+        let colCell = document.createElement("td"); // Create a new column element 
+        col.appendChild(colCell); // Append the new column cell to the last col element
+    }
+    gridTable.appendChild(col); // Append the row with the new column cell to the table.
+    // alert("Clicked Add Col")
 }
 
 //Remove a row
