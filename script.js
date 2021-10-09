@@ -1,23 +1,41 @@
-let numRows = 0;
-let numCols = 0;
+let numRows = 1;
+let numCols = 1;
 let colorSelected; 
+let gridTable = document.getElementById("grid"); // Select section with an id of grid
+
 
 //Add a row
 function addR() {
-    alert("Clicked Add Row")
+    let row = document.createElement("tr"); // Create a new row element
+    for (i = 0; i < numCols; i++){
+        let rowCell = document.createElement("td"); // Create a new rowCell element
+        row.appendChild(rowCell); // Append new rowCell element to last row element
+    }
+    gridTable.appendChild(row); // Append row to grid table
+    numRows++; // Increment number of rows
+   //alert("Clicked Add Row")
 }
+
 //Add a column
 function addC() {
-    alert("Clicked Add Col")
+    numCols++; // Increment number of columns
+    for (i = 0; i < numRows; i++) { 
+        let col = document.getElementsByTagName("tr")[i]; // loop over every row
+        let colCell = document.createElement("td"); // Create a new column element 
+        col.appendChild(colCell); // Append the new column cell to the last col element
+    }
+    gridTable.appendChild(col); // Append the row with the new column cell to the table.
+    // alert("Clicked Add Col")
 }
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+    //alert.remove
+    gridTable.deleteRow(0);
 }
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+
 }
 //sets global var for selected color
 function selected(){
