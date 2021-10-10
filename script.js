@@ -36,6 +36,12 @@ function removeR() {
 
 //Remove a column
 function removeC() {
+    numCols--; //decrement numCols
+    for (j = 0; j < numRows; j++) {
+        let row = document.getElementsByTagName("tr"); //gets row
+        row[j].deleteCell(0); //access row and deletes the entire column
+    }
+    gridTable.removeChild(gridTable.lastElementChild); // Append the row with the new column cell to the table.
 
 }
 //sets global var for selected color
