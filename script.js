@@ -42,6 +42,7 @@ function removeC() {
         row[j].deleteCell(0); //access row and deletes the entire column
     }
     gridTable.removeChild(gridTable.lastElementChild); // Append the row with the new column cell to the table.
+
 }
 //sets global var for selected color
 function selected(){
