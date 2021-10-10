@@ -30,11 +30,13 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+    gridTable.removeChild(gridTable.lastElementChild); //Removes Rows from the last added row
+    numRows--; //Decrement Row Count
 }
+
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+
 }
 //sets global var for selected color
 function selected(){
