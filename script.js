@@ -9,6 +9,9 @@ function addR() {
     let row = document.createElement("tr"); // Create a new row element
     for (i = 0; i < numCols; i++){
         let rowCell = document.createElement("td"); // Create a new rowCell element
+        rowCell.addEventListener("click", function() { // Add click event listener for newly created row cell
+            rowCell.style.backgroundColor = colorSelected; // Change individual row cell color to current selected color when clicked
+          });
         row.appendChild(rowCell); // Append new rowCell element to last row element
     }
     gridTable.appendChild(row); // Append row to grid table
@@ -22,6 +25,9 @@ function addC() {
     for (i = 0; i < numRows; i++) { 
         let col = document.getElementsByTagName("tr")[i]; // loop over every row
         let colCell = document.createElement("td"); // Create a new column element 
+        colCell.addEventListener("click", function() { // Add click event listener for newly created column cell
+            colCell.style.backgroundColor = colorSelected; // Change individual column cell color to current selected color when clicked
+          });
         col.appendChild(colCell); // Append the new column cell to the last col element
     }
     gridTable.appendChild(col); // Append the row with the new column cell to the table.
