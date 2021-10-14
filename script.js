@@ -16,7 +16,6 @@ function addR() {
     }
     gridTable.appendChild(row); // Append row to grid table
     numRows++; // Increment number of rows
-   //alert("Clicked Add Row")
 }
 
 //Add a column
@@ -31,7 +30,6 @@ function addC() {
         col.appendChild(colCell); // Append the new column cell to the last col element
     }
     gridTable.appendChild(col); // Append the row with the new column cell to the table.
-    // alert("Clicked Add Col")
 }
 
 //Remove a row
