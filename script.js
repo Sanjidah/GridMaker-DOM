@@ -63,10 +63,11 @@ function fill() {
     row.style.backgroundColor = colorSelected;
   }
 
-  for (i = 0; i < numCols; i++) {
-    let col = document.getElementsByTagName("tr")[i];
-    col.style.backgroundColor = colorSelected;
-  }
+  //not working
+  // for (i = 0; i < numCols; i++) {
+  //   let col = document.getElementsByTagName("tr")[i];
+  //   col.style.backgroundColor = colorSelected;
+  // }
 }
 
 //clear all cells/restore all cells to their original/initial color
