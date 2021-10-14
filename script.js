@@ -56,12 +56,16 @@ function selected() {
 
 //**********************Start of Komal Kaur's Functions*****************************
 
-
 //fill ALL cells with the currently selected color
 function fill() {
-  alert("Clicked Fill All");
-  for(){
+  for (i = 0; i < numRows; i++) {
+    let row = document.getElementsByTagName("td")[i];
+    row.style.backgroundColor = colorSelected;
+  }
 
+  for (i = 0; i < numCols; i++) {
+    let col = document.getElementsByTagName("tr")[i];
+    col.style.backgroundColor = colorSelected;
   }
 }
 
