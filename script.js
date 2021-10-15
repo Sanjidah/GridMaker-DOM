@@ -59,15 +59,14 @@ function selected() {
 //fill ALL cells with the currently selected color
 function fill() {
   for (i = 0; i < numRows; i++) {
-    let row = document.getElementsByTagName("td")[i];
+    var row = document.getElementsByTagName("td")[i];
     row.style.backgroundColor = colorSelected;
   }
 
-  //not working
-  // for (i = 0; i < numCols; i++) {
-  //   let col = document.getElementsByTagName("tr")[i];
-  //   col.style.backgroundColor = colorSelected;
-  // }
+  for (i = 0; i < numCols; i++) {
+    let col = document.getElementsByTagName("tr")[i];
+    col.style.backgroundColor = colorSelected;
+  }
 }
 
 //clear all cells/restore all cells to their original/initial color
