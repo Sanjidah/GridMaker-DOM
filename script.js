@@ -58,9 +58,14 @@ function selected() {
 
 //fill ALL cells with the currently selected color
 function fill() {
-  let row = document.getElementsByTagName("td"); //gets row 
-  for(var i = 0; i < row.length; i++){
-      row[i].style.backgroundColor = colorSelected;  //fills every cell with colorSelected
+  for (i = 0; i < numRows; i++) {
+    var row = document.getElementsByTagName("td")[i];
+    row.style.backgroundColor = colorSelected;
+  }
+
+  for (i = 0; i < numCols; i++) {
+    let col = document.getElementsByTagName("tr")[i];
+    col.style.backgroundColor = colorSelected;
   }
 }
 
