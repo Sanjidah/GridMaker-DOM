@@ -60,7 +60,8 @@ function selected() {
 function fill() {
   let row = document.getElementsByTagName("td"); //gets row
   for (let i = 0; i < row.length; i++) {
-    row[i].style.backgroundColor = colorSelected; //fills all cells with colorSelected
+    //changed this line, this sets the css background color so i can compare val in fillu func
+    document.querySelectorAll("td")[i].style.backgroundColor = colorSelected; //fills all cells with colorSelected
   }
 }
 
@@ -68,7 +69,7 @@ function fill() {
 function clearAll() {
   let row = document.getElementsByTagName("td"); //gets rows
   for (let i = 0; i < row.length; i++) {
-    document.querySelectorAll("td")[i].style.backgroundColor = "white";
+    document.querySelectorAll("td")[i].style.backgroundColor = "white"; //changes to the color to white for all
   }
 }
 
@@ -76,7 +77,23 @@ function clearAll() {
 function fillU() {
   //alert("Clicked Fill All Uncolored");
   let row = document.getElementsByTagName("td"); //gets row
-  for (let i = 0; i < row.length; i++) {}
+  for (let i = 0; i < row.length; i++) {
+    let cs = row[i].style; //get the css propeties of row
+    let bg = cs.backgroundColor; //gets the backgroundColor from cs
+    //check if color is set for row background
+    if (bg === "blue") {
+      console.log("I am blue");
+    } else if (bg === "green") {
+      console.log("I am green");
+    } else if (bg === "yellow") {
+      console.log("I am yellow");
+    } else if (bg === "red") {
+      console.log("I am red");
+      //if its not set, set it to the color selected
+    } else {
+      document.querySelectorAll("td")[i].style.backgroundColor = colorSelected;
+    }
+  }
 }
 
 //**********************End of Komal Kaur's Functions*****************************
