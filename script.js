@@ -60,18 +60,23 @@ function selected() {
 function fill() {
   let row = document.getElementsByTagName("td"); //gets row
   for (let i = 0; i < row.length; i++) {
-    row[i].style.backgroundColor = colorSelected; //fills all cells with colorSelected 
+    row[i].style.backgroundColor = colorSelected; //fills all cells with colorSelected
   }
 }
 
 //clear all cells/restore all cells to their original/initial color
 function clearAll() {
-  alert("Clicked Clear All");
+  let row = document.getElementsByTagName("td"); //gets rows
+  for (let i = 0; i < row.length; i++) {
+    document.querySelectorAll("td")[i].style.backgroundColor = "white";
+  }
 }
 
 //fills all UNCOLORED cells with the currently selected color
 function fillU() {
-  alert("Clicked Fill All Uncolored");
+  //alert("Clicked Fill All Uncolored");
+  let row = document.getElementsByTagName("td"); //gets row
+  for (let i = 0; i < row.length; i++) {}
 }
 
 //**********************End of Komal Kaur's Functions*****************************
