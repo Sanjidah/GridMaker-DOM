@@ -8,13 +8,6 @@ function addR() {
   let row = document.createElement("tr"); // Create a new row element
   for (i = 0; i < numCols; i++) {
     let rowCell = document.createElement("td"); // Create a new rowCell element
-    rowCell.addEventListener("mouseleave", function () {
-      rowCell.style.transform = `translate3d(-5px, 0, 0)`;
-    });
-
-    rowCell.addEventListener("mouseenter", function () {
-      rowCell.style.transform = `translate3d(5px, 0, 0)`;
-    });
     rowCell.addEventListener("click", function () {
       // Add click event listener for newly created row cell
       rowCell.style.backgroundColor = colorSelected; // Change individual row cell color to current selected color when clicked
@@ -31,14 +24,6 @@ function addC() {
   for (i = 0; i < numRows; i++) {
     let col = document.getElementsByTagName("tr")[i]; // loop over every row
     let colCell = document.createElement("td"); // Create a new column element
-    colCell.addEventListener("mouseleave", function () {
-      colCell.style.transform = `translate3d(-5px, 0, 0)`;
-    });
-
-    colCell.addEventListener("mouseenter", function () {
-      colCell.style.transform = `translate3d(5px, 0, 0)`;
-    });
-
     colCell.addEventListener("click", function () {
       // Add click event listener for newly created column cell
       colCell.style.backgroundColor = colorSelected; // Change individual column cell color to current selected color when clicked
